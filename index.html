@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <style type="text/tailwindcss">
     @theme {
           --color-clifford: #da373d;
@@ -24,54 +25,63 @@
       </style>
 </head>
 
-<body>
-<header class="bg-linear-to-b from-white to-gray-300"> 
-  <nav class="md:container mx-auto lg:w-5/6">
+<body class="font-[Sora]">
+<header class="bg-linear-to-b from-stone-300 to-gray-400">
+  <!-- menu-bar -->
+  <nav class="md:container mx-auto lg:w-5/6 border-y border-[#179800] md:border-none lg:border-none">
     <div class="navbar bg-base-100">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
-            <li>
-              <a>Parent</a>
-              <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
+      <div class="navbar-start flex justify-between">
         <a class="w-1/4"><img src="./assets/logo-header.png" alt=""></a>
       </div>
-      <div class="navbar-center hidden lg:flex">
+      <div class="navbar-center hidden lg:flex text-[#111111]">
         <ul class="menu menu-horizontal px-1">
-          <li><a>Item 1</a></li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a>Item 3</a></li>
+          <li><a>Product</a></li>
+          <li><a>Service</a></li>
+          <li><a>Contact Us</a></li>
         </ul>
       </div>
-      <div class="navbar-end">
-        <a class="btn">Button</a>
+      <div class="navbar-end space-x-5 hidden md:flex lg:flex">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <a class="btn btn-outline border-[#179800] h-4/5">login</a>
+        <a class="btn bg-[#179800] text-white">Register</a>
+      </div>
+      <!-- Hamburger-menu -->
+      <div>
+          <div class="dropdown lg:hidden md:hidden  text-[#179800]">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ml-40">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Product</a></li>
+              <li><a>Service</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div> 
       </div>
     </div>
   </nav>
 </header>
-<main>
-  <section></section>
+<main class="lg:mt-20 mt-10 md:container mx-auto lg:w-5/6">
+  <section>
+    <!-- Hero section -->
+    <div class="text-center">
+      <h1 class="lg:text-4xl text-3xl font-extrabold w-5/6 mx-auto">Freshness <span class="text-[#179800]">You Can</span> <br>
+        <span class="text-[#179800]">Count</span> On, Prices You’ll Love!
+      </h1>
+      <p class="text-gray-400 text-xs">Shop your daily essentials at unbeatable prices. From fresh produce to
+        pantry <br>staples, we’ve got you covered every
+        day!</p>
+      <img src="./assets/hero-vegetables.png" alt="" class="w-3/4 mx-auto">
+    </div>
+    <div
+      class="transform rounded-xl h-40 w-40 sm:h-64 sm:w-64 bg-white shadow-xl transition duration-300 hover:translate-x-4">
+      <div class="flex h-full justify-center items-center">
+        <span class="font-bold text-amber-500">fresh</span>
+      </div>
+  </section>
   <section></section>
   <section></section>
   <section></section>
