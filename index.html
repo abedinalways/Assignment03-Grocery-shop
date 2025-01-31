@@ -67,7 +67,7 @@
 <main class="lg:mt-20 mt-10 md:container mx-auto lg:w-5/6">
   <section>
     <!-- Hero section -->
-    <div class="text-center">
+    <div class="text-center relative">
       <h1 class="lg:text-4xl text-3xl font-extrabold w-5/6 mx-auto">Freshness <span class="text-[#179800]">You Can</span> <br>
         <span class="text-[#179800]">Count</span> On, Prices You’ll Love!
       </h1>
@@ -76,11 +76,16 @@
         day!</p>
       <img src="./assets/hero-vegetables.png" alt="" class="w-3/4 mx-auto">
     </div>
-    <div
-      class="transform rounded-xl h-40 w-40 sm:h-64 sm:w-64 bg-white shadow-xl transition duration-300 hover:translate-x-4">
-      <div class="flex h-full justify-center items-center">
-        <span class="font-bold text-amber-500">fresh</span>
+    <!-- card animation -->
+    <div class="mt-10 card glass w-50 animate-pulse rounded-full fixed bg-white bottom-13 right-40">
+      <figure class="mt-5">
+        <img src="./assets/vegetables.png" alt="fresh" />
+      </figure>
+      <div class="card-body ">
+        <h2 class="card-title mx-auto text-[#179800] mb-3 font-">100% Fresh</h2>
       </div>
+    </div>
+    </div>
   </section>
   <section></section>
   <section></section>
